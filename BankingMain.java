@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import banking.bankingOperation;
 
 public class BankingMain {
     public static void main(String args[]){
@@ -8,6 +9,7 @@ public class BankingMain {
         Cname = Scn.next();
         System.out.println("Enter Your Banking ID:");
         Cid = Scn.next();
-        bankingOperation(Cname,Cid);
+        bankingOperation bnkOpn = new bankingOperation(Cname, Cid);
+        bnkOpn.menu();
     }
 }
