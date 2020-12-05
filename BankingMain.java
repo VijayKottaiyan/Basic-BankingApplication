@@ -11,5 +11,6 @@ public class BankingMain {
         Cid = Scn.next();
         bankingOperation bnkOpn = new bankingOperation(Cname, Cid);
         bnkOpn.menu();
+        Scn.close();
     }
 }

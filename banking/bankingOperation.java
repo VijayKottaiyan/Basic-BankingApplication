@@ -6,7 +6,7 @@ public class bankingOperation {
     String Cname,Cid;
     double Balance = 0.00;
     Scanner Scn = new Scanner(System.in);
-    bankingOperation(String cname, String cid){
+    public bankingOperation(String cname, String cid){
         this.Cname = cname;
         this.Cid = cid;
     }
@@ -21,7 +21,7 @@ public class bankingOperation {
     void deposit (double amnt){
         
         if (amnt!=0){
-            Balance = amnt;
+            Balance = Balance + amnt;
             System.out.println("Amount Deposited Successfully");
         }
         else{
@@ -40,7 +40,7 @@ public class bankingOperation {
     }
 
     void balance (){
-        System.out.println("The Balance in your Account"+Balance);
+        System.out.println("The Balance in your Account : "+Balance);
     }
 
     void lastTransaction(double value){
@@ -48,18 +48,18 @@ public class bankingOperation {
             System.out.println("Deposited : "+value);
         }
         else if (value<0){
-            System.out.println("Withdrawn : "+value);
+            System.out.println("Withdrawn : "+Math.abs(value));
         }
         else{
             System.out.println("No operation has been performed on your Account!!");
         }
     } 
 
-    void menu(){
+    public void menu(){
         int choice;
-        double amount;
-        System.out.println("Welcome to the Bank, "+Cname);
-        System.out.println("Customer ID: "+Cid);
+        double amount = 0.00;
+        System.out.println("\n\n\nWelcome to the Bank, "+Cname);
+        System.out.println("\nCustomer ID: "+Cid);
         System.out.println("\n\n\n\n------Main Menu------");
         System.out.println("\n\n1.Deposit");
         System.out.println("2.Withdraw");
