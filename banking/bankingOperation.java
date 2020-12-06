@@ -90,8 +90,10 @@ public class bankingOperation {
                     break;
                 }
                 default:{
+                    if(choice!=5){
                     System.out.println("Error: Invalid Option is pressed");
                     System.out.println("\nPlease provide an Valid option");
+                    }
                 }
             }
         }while(choice!=5);
